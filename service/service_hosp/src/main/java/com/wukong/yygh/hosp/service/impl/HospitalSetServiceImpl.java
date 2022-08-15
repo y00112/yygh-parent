@@ -1,9 +1,10 @@
 package com.wukong.yygh.hosp.service.impl;
 
-import com.wukong.yygh.hosp.entity.HospitalSet;
+
 import com.wukong.yygh.hosp.mapper.HospitalSetMapper;
 import com.wukong.yygh.hosp.service.HospitalSetService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.wukong.yygh.model.hosp.HospitalSet;
 import org.springframework.stereotype.Service;
 
 /**

@@ -1,7 +1,8 @@
 package com.wukong.yygh.hosp.service;
 
-import com.wukong.yygh.hosp.entity.HospitalSet;
+
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.wukong.yygh.model.hosp.HospitalSet;
 
 /**
  * <p>
