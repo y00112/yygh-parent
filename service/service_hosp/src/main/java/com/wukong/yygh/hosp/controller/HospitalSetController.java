@@ -1,6 +1,7 @@
 package com.wukong.yygh.hosp.controller;
 
 
+import com.wukong.yygh.common.result.ResponseResult;
 import com.wukong.yygh.hosp.service.HospitalSetService;
 import com.wukong.yygh.model.hosp.HospitalSet;
 import io.swagger.annotations.Api;
@@ -32,8 +33,9 @@ public class HospitalSetController {
      */
     @ApiOperation(value = "查询所有医院信息")
     @GetMapping("/hospitalInfo")
-    public List<HospitalSet> findAll() {
-        return hospitalSetService.list();
+    public ResponseResult findAll() {
+        List<HospitalSet> list = hospitalSetService.list();
+        return ResponseResult.success().data("items",list);
     }
 
     /**
@@ -41,8 +43,13 @@ public class HospitalSetController {
      */
     @ApiOperation(value = "删除医院信息根据ID")
     @DeleteMapping("/hospitalInfo/{id}")
-    public Boolean removeById(@PathVariable Integer id) {
-        return hospitalSetService.removeById(id);
+    public ResponseResult removeById(@PathVariable Integer id) {
+        boolean b = hospitalSetService.removeById(id);
+        if (b){
+            return ResponseResult.success().success(b);
+        }
+        return ResponseResult.error().success(b);
+
     }
 }
 
