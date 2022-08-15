@@ -3,6 +3,7 @@ package com.wukong.yygh.hosp.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.wukong.yygh.common.exception.MyException;
 import com.wukong.yygh.common.result.ResponseResult;
 import com.wukong.yygh.hosp.service.HospitalSetService;
 import com.wukong.yygh.hosp.util.MD5;
@@ -42,6 +43,8 @@ public class HospitalSetController {
     @ApiOperation(value = "查询所有医院信息")
     @GetMapping("/hospitalInfo")
     public ResponseResult findAll() {
+
+//        int a = 10/0;
         List<HospitalSet> list = hospitalSetService.list();
         return ResponseResult.success().data("items",list);
     }
