@@ -47,7 +47,7 @@ public class ResponseResult {
     }
 
     public ResponseResult message(String message){
-        this.message(message);
+        this.setMessage(message);
         return this;
     }
 
