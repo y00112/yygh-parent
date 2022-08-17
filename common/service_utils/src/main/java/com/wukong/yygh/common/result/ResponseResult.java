@@ -52,7 +52,7 @@ public class ResponseResult {
     }
 
     public ResponseResult success(Boolean success){
-        this.success(success);
+        this.setSuccess(success);
         return this;
     }
 

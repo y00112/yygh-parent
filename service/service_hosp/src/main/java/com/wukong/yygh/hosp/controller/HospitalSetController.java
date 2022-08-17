@@ -30,7 +30,8 @@ import java.util.Random;
  */
 @Api(tags = "预约设置接口")
 @RestController
-@RequestMapping("/hosp/hospital-set")
+@RequestMapping("/admin/hosp/hospital-set")
+@CrossOrigin
 public class HospitalSetController {
 
     @Autowired
@@ -71,7 +72,7 @@ public class HospitalSetController {
             }
 
             if (!StringUtils.isEmpty(hoscode)){
-                queryWrapper.eq("hashCode",hoscode);
+                queryWrapper.eq("hoscode ",hoscode);
             }
         }
 
@@ -158,7 +159,7 @@ public class HospitalSetController {
      * 批量删除
      */
     @DeleteMapping("/batchRemove")
-    public ResponseResult batchRemoveHospSet(List<Long> ids){
+    public ResponseResult batchRemoveHospSet(@RequestBody List<Long> ids){
         boolean delete = hospitalSetService.removeByIds(ids);
         if (delete){
             return ResponseResult.success().message("批量删除成功");
