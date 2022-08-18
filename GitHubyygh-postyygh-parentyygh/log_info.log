@@ -1,0 +1,262 @@
+2022-08-18 10:56:59.522 [restartedMain] INFO  com.wukong.yygh.dict.ServiceDictApplication - Starting ServiceDictApplication on LAPTOP-0FIKEUU1 with PID 916 (E:\GitHub\yygh-post\yygh-parent\service\service_cmn\target\classes started by admin in E:\GitHub\yygh-post\yygh-parent)
+2022-08-18 10:56:59.527 [restartedMain] INFO  com.wukong.yygh.dict.ServiceDictApplication - The following profiles are active: dev
+2022-08-18 10:56:59.613 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in D:\environment\apache-maven-3.6.1\maven-rope\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2022-08-18 10:56:59.614 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-18 10:56:59.614 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-18 10:57:01.941 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-18 10:57:03.805 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8202 (http)
+2022-08-18 10:57:03.863 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8202"]
+2022-08-18 10:57:03.866 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-18 10:57:03.868 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-08-18 10:57:04.293 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-18 10:57:04.294 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4679 ms
+2022-08-18 10:57:07.844 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-18 10:57:08.101 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-18 10:57:08.212 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-08-18 10:57:08.559 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2022-08-18 10:57:08.607 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 2 custom documentation plugin(s)
+2022-08-18 10:57:08.707 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 10:57:09.424 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 10:57:09.639 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: exportExcelUsingGET_1
+2022-08-18 10:57:09.762 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getDictListByPidUsingGET_1
+2022-08-18 10:57:09.788 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8202"]
+2022-08-18 10:57:09.874 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8202 (http) with context path ''
+2022-08-18 10:57:09.891 [restartedMain] INFO  com.wukong.yygh.dict.ServiceDictApplication - Started ServiceDictApplication in 11.646 seconds (JVM running for 14.05)
+2022-08-18 10:57:12.178 [restartedMain] INFO  com.wukong.yygh.hosp.ServiceHospApplication - Starting ServiceHospApplication on LAPTOP-0FIKEUU1 with PID 53452 (E:\GitHub\yygh-post\yygh-parent\service\service_hosp\target\classes started by admin in E:\GitHub\yygh-post\yygh-parent)
+2022-08-18 10:57:12.191 [restartedMain] INFO  com.wukong.yygh.hosp.ServiceHospApplication - The following profiles are active: dev
+2022-08-18 10:57:12.320 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-18 10:57:12.322 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-18 10:57:15.332 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-18 10:57:16.250 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8201 (http)
+2022-08-18 10:57:16.284 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8201"]
+2022-08-18 10:57:16.286 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-18 10:57:16.288 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-08-18 10:57:16.524 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-18 10:57:16.525 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4202 ms
+2022-08-18 10:57:20.016 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-18 10:57:20.259 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-18 10:57:20.841 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2022-08-18 10:57:20.870 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 2 custom documentation plugin(s)
+2022-08-18 10:57:20.928 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 10:57:21.414 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 10:57:21.530 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: batchRemoveHospSetUsingDELETE_1
+2022-08-18 10:57:21.540 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2022-08-18 10:57:21.549 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: geHospitalSetDetailUsingGET_1
+2022-08-18 10:57:21.556 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: lockHospitalSetUsingPUT_1
+2022-08-18 10:57:21.569 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageListUsingPOST_1
+2022-08-18 10:57:21.580 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: removeByIdUsingDELETE_1
+2022-08-18 10:57:21.609 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2022-08-18 10:57:21.626 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateByIdUsingPOST_1
+2022-08-18 10:57:21.650 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8201"]
+2022-08-18 10:57:21.708 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8201 (http) with context path ''
+2022-08-18 10:57:21.718 [restartedMain] INFO  com.wukong.yygh.hosp.ServiceHospApplication - Started ServiceHospApplication in 12.232 seconds (JVM running for 15.233)
+2022-08-18 10:58:36.411 [http-nio-8201-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-18 10:58:36.412 [http-nio-8201-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-18 10:58:36.428 [http-nio-8201-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2022-08-18 10:58:36.639 [http-nio-8201-exec-2] INFO  com.wukong.yygh.hosp.controller.LoginController - token: admin-token
+2022-08-18 10:58:41.192 [http-nio-8201-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-18 10:58:41.689 [http-nio-8201-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-18 10:58:50.446 [http-nio-8202-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-18 10:58:50.447 [http-nio-8202-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-18 10:58:50.466 [http-nio-8202-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 19 ms
+2022-08-18 10:58:50.590 [http-nio-8202-exec-4] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 10:58:50.774 [http-nio-8202-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-18 10:58:51.303 [http-nio-8202-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-18 10:59:01.235 [http-nio-8202-exec-8] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 10:59:15.652 [http-nio-8202-exec-7] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 10:59:28.554 [http-nio-8202-exec-3] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:02:13.846 [http-nio-8202-exec-9] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:03:07.367 [http-nio-8202-exec-2] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:04:10.396 [http-nio-8202-exec-1] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:04:11.264 [http-nio-8202-exec-4] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:04:42.751 [http-nio-8202-exec-5] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:06:36.264 [restartedMain] INFO  com.wukong.yygh.hosp.ServiceHospApplication - Starting ServiceHospApplication on LAPTOP-0FIKEUU1 with PID 45464 (E:\GitHub\yygh-post\yygh-parent\service\service_hosp\target\classes started by admin in E:\GitHub\yygh-post\yygh-parent)
+2022-08-18 11:06:36.268 [restartedMain] INFO  com.wukong.yygh.hosp.ServiceHospApplication - The following profiles are active: dev
+2022-08-18 11:06:36.354 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-18 11:06:36.355 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-18 11:06:38.150 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-18 11:06:38.591 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8201 (http)
+2022-08-18 11:06:38.611 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8201"]
+2022-08-18 11:06:38.613 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-18 11:06:38.614 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-08-18 11:06:38.763 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-18 11:06:38.764 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2409 ms
+2022-08-18 11:06:40.439 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-18 11:06:40.545 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-18 11:06:40.794 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2022-08-18 11:06:40.816 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 2 custom documentation plugin(s)
+2022-08-18 11:06:40.867 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 11:06:41.146 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 11:06:41.220 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: batchRemoveHospSetUsingDELETE_1
+2022-08-18 11:06:41.247 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2022-08-18 11:06:41.252 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: geHospitalSetDetailUsingGET_1
+2022-08-18 11:06:41.256 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: lockHospitalSetUsingPUT_1
+2022-08-18 11:06:41.264 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageListUsingPOST_1
+2022-08-18 11:06:41.271 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: removeByIdUsingDELETE_1
+2022-08-18 11:06:41.283 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2022-08-18 11:06:41.289 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateByIdUsingPOST_1
+2022-08-18 11:06:41.305 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8201"]
+2022-08-18 11:06:41.351 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8201 (http) with context path ''
+2022-08-18 11:06:41.358 [restartedMain] INFO  com.wukong.yygh.hosp.ServiceHospApplication - Started ServiceHospApplication in 6.137 seconds (JVM running for 7.985)
+2022-08-18 11:06:55.205 [http-nio-8201-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-18 11:06:55.206 [http-nio-8201-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-18 11:06:55.225 [http-nio-8201-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 19 ms
+2022-08-18 11:06:55.302 [http-nio-8201-exec-2] INFO  com.wukong.yygh.hosp.controller.LoginController - token: admin-token
+2022-08-18 11:06:55.536 [http-nio-8202-exec-6] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:11:53.489 [restartedMain] INFO  com.wukong.yygh.dict.ServiceDictApplication - Starting ServiceDictApplication on LAPTOP-0FIKEUU1 with PID 62224 (E:\GitHub\yygh-post\yygh-parent\service\service_cmn\target\classes started by admin in E:\GitHub\yygh-post\yygh-parent)
+2022-08-18 11:11:53.495 [restartedMain] INFO  com.wukong.yygh.dict.ServiceDictApplication - The following profiles are active: dev
+2022-08-18 11:11:53.568 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in D:\environment\apache-maven-3.6.1\maven-rope\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2022-08-18 11:11:53.569 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-18 11:11:53.569 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-18 11:11:55.554 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-18 11:11:56.192 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8202 (http)
+2022-08-18 11:11:56.206 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8202"]
+2022-08-18 11:11:56.207 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-18 11:11:56.208 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-08-18 11:11:56.430 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-18 11:11:56.431 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2861 ms
+2022-08-18 11:11:58.859 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-18 11:11:59.063 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-18 11:11:59.151 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-08-18 11:11:59.435 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2022-08-18 11:11:59.467 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 2 custom documentation plugin(s)
+2022-08-18 11:11:59.522 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 11:11:59.768 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 11:11:59.868 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: exportExcelUsingGET_1
+2022-08-18 11:11:59.883 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getDictListByPidUsingGET_1
+2022-08-18 11:11:59.898 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8202"]
+2022-08-18 11:11:59.931 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8202 (http) with context path ''
+2022-08-18 11:11:59.937 [restartedMain] INFO  com.wukong.yygh.dict.ServiceDictApplication - Started ServiceDictApplication in 7.853 seconds (JVM running for 10.247)
+2022-08-18 11:12:13.547 [http-nio-8201-exec-1] INFO  com.wukong.yygh.hosp.controller.LoginController - token: admin-token
+2022-08-18 11:12:13.784 [http-nio-8202-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-18 11:12:13.784 [http-nio-8202-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-18 11:12:13.800 [http-nio-8202-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2022-08-18 11:12:13.899 [http-nio-8202-exec-1] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:12:14.026 [http-nio-8202-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-18 11:12:14.431 [http-nio-8202-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-18 11:18:29.925 [http-nio-8202-exec-6] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:22:59.201 [http-nio-8201-exec-3] INFO  com.wukong.yygh.hosp.controller.LoginController - token: admin-token
+2022-08-18 11:22:59.427 [http-nio-8202-exec-5] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:23:30.015 [http-nio-8201-exec-4] INFO  com.wukong.yygh.hosp.controller.LoginController - token: admin-token
+2022-08-18 11:23:30.176 [http-nio-8202-exec-7] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:24:49.986 [http-nio-8202-exec-8] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:31:30.965 [http-nio-8202-exec-10] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:35:35.832 [http-nio-8202-exec-3] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:57:11.489 [restartedMain] INFO  com.wukong.yygh.dict.ServiceDictApplication - Starting ServiceDictApplication on LAPTOP-0FIKEUU1 with PID 48164 (E:\GitHub\yygh-post\yygh-parent\service\service_cmn\target\classes started by admin in E:\GitHub\yygh-post\yygh-parent)
+2022-08-18 11:57:11.492 [restartedMain] INFO  com.wukong.yygh.dict.ServiceDictApplication - The following profiles are active: dev
+2022-08-18 11:57:11.566 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in D:\environment\apache-maven-3.6.1\maven-rope\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2022-08-18 11:57:11.567 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-18 11:57:11.568 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-18 11:57:13.660 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-18 11:57:14.074 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8202 (http)
+2022-08-18 11:57:14.086 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8202"]
+2022-08-18 11:57:14.087 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-18 11:57:14.087 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-08-18 11:57:14.250 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-18 11:57:14.250 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2682 ms
+2022-08-18 11:57:15.903 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-18 11:57:16.021 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-18 11:57:16.071 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-08-18 11:57:16.254 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2022-08-18 11:57:16.276 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 2 custom documentation plugin(s)
+2022-08-18 11:57:16.312 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 11:57:16.498 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 11:57:16.573 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: exportExcelUsingGET_1
+2022-08-18 11:57:16.587 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getDictListByPidUsingGET_1
+2022-08-18 11:57:16.590 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: importDataUsingPOST_1
+2022-08-18 11:57:16.606 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8202"]
+2022-08-18 11:57:16.639 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8202 (http) with context path ''
+2022-08-18 11:57:16.646 [restartedMain] INFO  com.wukong.yygh.dict.ServiceDictApplication - Started ServiceDictApplication in 6.375 seconds (JVM running for 8.385)
+2022-08-18 11:58:45.222 [http-nio-8202-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-18 11:58:45.223 [http-nio-8202-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-18 11:58:45.236 [http-nio-8202-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2022-08-18 11:58:46.761 [http-nio-8202-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-18 11:58:47.103 [http-nio-8202-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-08-18 11:58:47.391 [http-nio-8202-exec-3] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 11:59:00.182 [http-nio-8202-exec-5] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 14:53:10.192 [Thread-2] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-18 14:53:11.061 [restartedMain] INFO  com.wukong.yygh.hosp.ServiceHospApplication - Starting ServiceHospApplication on LAPTOP-0FIKEUU1 with PID 45464 (E:\GitHub\yygh-post\yygh-parent\service\service_hosp\target\classes started by admin in E:\GitHub\yygh-post\yygh-parent)
+2022-08-18 14:53:11.061 [restartedMain] INFO  com.wukong.yygh.hosp.ServiceHospApplication - The following profiles are active: dev
+2022-08-18 14:53:12.472 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8201 (http)
+2022-08-18 14:53:12.474 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8201"]
+2022-08-18 14:53:12.475 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-18 14:53:12.476 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-08-18 14:53:12.521 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-18 14:53:12.521 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1455 ms
+2022-08-18 14:53:12.551 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2022-08-18 14:53:12.567 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-18 14:53:15.395 [restartedMain] INFO  com.wukong.yygh.hosp.ServiceHospApplication - Starting ServiceHospApplication on LAPTOP-0FIKEUU1 with PID 45464 (E:\GitHub\yygh-post\yygh-parent\service\service_hosp\target\classes started by admin in E:\GitHub\yygh-post\yygh-parent)
+2022-08-18 14:53:15.396 [restartedMain] INFO  com.wukong.yygh.hosp.ServiceHospApplication - The following profiles are active: dev
+2022-08-18 14:53:21.663 [restartedMain] INFO  com.wukong.yygh.dict.ServiceDictApplication - Starting ServiceDictApplication on LAPTOP-0FIKEUU1 with PID 66424 (E:\GitHub\yygh-post\yygh-parent\service\service_cmn\target\classes started by admin in E:\GitHub\yygh-post\yygh-parent)
+2022-08-18 14:53:21.666 [restartedMain] INFO  com.wukong.yygh.dict.ServiceDictApplication - The following profiles are active: dev
+2022-08-18 14:53:21.746 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in D:\environment\apache-maven-3.6.1\maven-rope\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/D:/environment/apache-maven-3.6.1/maven-rope/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2022-08-18 14:53:21.747 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-18 14:53:21.747 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-18 14:53:23.521 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-18 14:53:23.526 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-08-18 14:53:23.589 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39ms. Found 0 repository interfaces.
+2022-08-18 14:53:24.263 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-18 14:53:25.074 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8202 (http)
+2022-08-18 14:53:25.094 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8202"]
+2022-08-18 14:53:25.096 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-18 14:53:25.098 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-08-18 14:53:25.421 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-18 14:53:25.422 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3675 ms
+2022-08-18 14:53:29.486 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-18 14:53:29.861 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-18 14:53:29.947 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-08-18 14:53:30.603 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2022-08-18 14:53:30.631 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 2 custom documentation plugin(s)
+2022-08-18 14:53:30.788 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 14:53:31.151 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 14:53:31.406 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: exportExcelUsingGET_1
+2022-08-18 14:53:31.427 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: getDictListByPidUsingGET_1
+2022-08-18 14:53:31.442 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: importDataUsingPOST_1
+2022-08-18 14:53:31.469 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8202"]
+2022-08-18 14:53:31.528 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8202 (http) with context path ''
+2022-08-18 14:53:31.537 [restartedMain] INFO  com.wukong.yygh.dict.ServiceDictApplication - Started ServiceDictApplication in 11.135 seconds (JVM running for 13.476)
+2022-08-18 14:53:39.959 [restartedMain] INFO  com.wukong.yygh.hosp.ServiceHospApplication - Starting ServiceHospApplication on LAPTOP-0FIKEUU1 with PID 55560 (E:\GitHub\yygh-post\yygh-parent\service\service_hosp\target\classes started by admin in E:\GitHub\yygh-post\yygh-parent)
+2022-08-18 14:53:39.967 [restartedMain] INFO  com.wukong.yygh.hosp.ServiceHospApplication - The following profiles are active: dev
+2022-08-18 14:53:40.073 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-18 14:53:40.073 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-18 14:53:41.908 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-18 14:53:41.912 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-08-18 14:53:41.972 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39ms. Found 0 repository interfaces.
+2022-08-18 14:53:42.686 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-18 14:53:43.476 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8201 (http)
+2022-08-18 14:53:43.512 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8201"]
+2022-08-18 14:53:43.514 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-08-18 14:53:43.515 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-08-18 14:53:43.736 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-08-18 14:53:43.736 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3662 ms
+2022-08-18 14:53:46.297 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-18 14:53:46.520 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-18 14:53:46.966 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2022-08-18 14:53:46.993 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 2 custom documentation plugin(s)
+2022-08-18 14:53:47.042 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 14:53:47.375 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2022-08-18 14:53:47.463 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: batchRemoveHospSetUsingDELETE_1
+2022-08-18 14:53:47.469 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: findAllUsingGET_1
+2022-08-18 14:53:47.476 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: geHospitalSetDetailUsingGET_1
+2022-08-18 14:53:47.484 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: lockHospitalSetUsingPUT_1
+2022-08-18 14:53:47.500 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageListUsingPOST_1
+2022-08-18 14:53:47.510 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: removeByIdUsingDELETE_1
+2022-08-18 14:53:47.530 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: saveUsingPOST_1
+2022-08-18 14:53:47.539 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateByIdUsingPOST_1
+2022-08-18 14:53:47.559 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8201"]
+2022-08-18 14:53:47.593 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8201 (http) with context path ''
+2022-08-18 14:53:47.597 [restartedMain] INFO  com.wukong.yygh.hosp.ServiceHospApplication - Started ServiceHospApplication in 8.933 seconds (JVM running for 11.515)
+2022-08-18 14:54:09.732 [http-nio-8201-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-18 14:54:09.732 [http-nio-8201-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-18 14:54:09.743 [http-nio-8201-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2022-08-18 14:54:09.844 [http-nio-8201-exec-3] INFO  com.wukong.yygh.hosp.controller.LoginController - token: admin-token
+2022-08-18 14:54:18.667 [http-nio-8202-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-18 14:54:18.668 [http-nio-8202-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-08-18 14:54:18.681 [http-nio-8202-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2022-08-18 14:54:19.132 [http-nio-8202-exec-2] INFO  com.wukong.yygh.dict.controller.DictController - id======>
+2022-08-18 14:54:19.268 [http-nio-8202-exec-2] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2022-08-18 14:54:19.271 [http-nio-8202-exec-2] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2022-08-18 14:54:20.664 [http-nio-8202-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-08-18 14:54:21.137 [http-nio-8202-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.

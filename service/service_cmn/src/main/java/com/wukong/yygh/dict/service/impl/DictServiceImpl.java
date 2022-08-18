@@ -11,6 +11,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wukong.yygh.model.cmn.Dict;
 import com.wukong.yygh.vo.cmn.DictEeVo;
 import org.springframework.beans.BeanUtils;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -32,6 +34,7 @@ import java.util.List;
 @Service
 public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements DictService {
 
+    @Cacheable(value = "dict")
     @Override
     public List<Dict> getDickListByPid(Long id) {
         QueryWrapper<Dict> queryWrapper = new QueryWrapper<>();
@@ -82,6 +85,7 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         }
     }
 
+    @CachePut
     @Override
     public void importData(MultipartFile file) {
         try {
