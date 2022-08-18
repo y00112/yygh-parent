@@ -9,7 +9,9 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -30,6 +32,24 @@ public class DictController {
 
     @Autowired
     private DictService dictService;
+
+    /**
+     * 导入excel
+     */
+    @PostMapping("/importData")
+    public ResponseResult importData(MultipartFile file){
+        //解析 excel文件
+        dictService.importData(file);
+        return ResponseResult.success();
+    }
+
+    /**
+     * 导出excel
+     */
+    @GetMapping("/exportExcel")
+    public void exportExcel(HttpServletResponse response){
+        dictService.exportExcel(response);
+    }
 
     /**
      *根据pid查询子元素类别

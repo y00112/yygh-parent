@@ -1,12 +1,24 @@
 package com.wukong.yygh.dict.service.impl;
 
+import com.alibaba.excel.EasyExcel;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.wukong.yygh.dict.excel.DemoDataListener;
+import com.wukong.yygh.dict.excel.Student;
+import com.wukong.yygh.dict.listener.DictListener;
 import com.wukong.yygh.dict.mapper.DictMapper;
 import com.wukong.yygh.dict.service.DictService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wukong.yygh.model.cmn.Dict;
+import com.wukong.yygh.vo.cmn.DictEeVo;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,6 +43,55 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
             d.setHasChildren(result);
         }
         return dicts;
+    }
+
+    @Override
+    public void exportExcel(HttpServletResponse response) {
+        try {
+        //导出excel 一定要设置两个头信息：Mime-Type、content-type：attachment
+        response.setContentType("application/vnd.ms-excel");
+        response.setCharacterEncoding("utf-8");
+        // 这里URLEncoder.encode可以防止中文乱码 当然和easyexcel没有关系
+        String fileName = null;
+
+            // 防止乱码
+            fileName = URLEncoder.encode("数据字典", "UTF-8");
+
+        response.setHeader("Content-disposition", "attachment;filename="+ fileName + ".xlsx");
+
+        // 查询数据
+        List<Dict> dicts = baseMapper.selectList(null);
+
+        List<DictEeVo> dictEeVoList = new ArrayList<>();
+
+        // 遍历赋值
+        for(Dict d:dicts){
+            DictEeVo dictEeVo = new DictEeVo();
+            BeanUtils.copyProperties(d,dictEeVo); // 作用将一个对的属性值复制到另一个对象的属性上
+            dictEeVoList.add(dictEeVo);
+        }
+
+
+        // 写出
+        EasyExcel.write(response.getOutputStream(), DictEeVo.class)
+                .sheet()
+                .doWrite(dictEeVoList);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void importData(MultipartFile file) {
+        try {
+            // 解析上传的文件
+            EasyExcel.read(file.getInputStream(),DictEeVo.class,new DictListener(baseMapper))
+                    .sheet().doRead();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     // 判断当前元素是否有下一子元素
