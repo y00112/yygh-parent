@@ -6,6 +6,7 @@ import com.wukong.yygh.dict.mapper.DictMapper;
 import com.wukong.yygh.model.cmn.Dict;
 import com.wukong.yygh.vo.cmn.DictEeVo;
 import org.springframework.beans.BeanUtils;
+import org.springframework.cache.annotation.CachePut;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +24,7 @@ public class DictListener extends AnalysisEventListener<DictEeVo> {
         this.dictMapper = dictMapper;
     }
 
+    @CachePut
     @Override
     public void invoke(DictEeVo dictEeVo, AnalysisContext analysisContext) {
         Dict dict = new Dict();

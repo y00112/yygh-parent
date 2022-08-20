@@ -14,4 +14,6 @@ import com.wukong.yygh.model.hosp.HospitalSet;
  */
 public interface HospitalSetService extends IService<HospitalSet> {
 
+    // TODO 有问题 too many Collection
+    String getSignKey(String hoscode);
 }

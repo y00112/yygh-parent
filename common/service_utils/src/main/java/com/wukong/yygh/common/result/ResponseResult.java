@@ -65,4 +65,5 @@ public class ResponseResult {
         this.setData(data);
         return this;
     }
+
 }

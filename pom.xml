@@ -8,6 +8,7 @@
         <module>service</module>
         <module>code_generator</module>
         <module>common</module>
+        <module>hospital-manage</module>
     </modules>
 
     <parent>

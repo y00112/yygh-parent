@@ -85,7 +85,6 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         }
     }
 
-    @CachePut
     @Override
     public void importData(MultipartFile file) {
         try {

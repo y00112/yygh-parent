@@ -18,7 +18,17 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+  # mongodb链接信息
+  data:
+    mongodb:
+      uri: mongodb://47.94.220.33:27017/test
 # mybatis日志
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # redis配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 1
+    timeout: 1800000

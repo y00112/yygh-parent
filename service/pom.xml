@@ -23,6 +23,12 @@
 
     <dependencies>
 
+        <!--MongoDB -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+
         <!--引入 service_utils-->
         <dependency>
             <groupId>com.wukong</groupId>
