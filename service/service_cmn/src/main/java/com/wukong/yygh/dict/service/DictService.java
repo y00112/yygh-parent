@@ -22,4 +22,8 @@ public interface DictService extends IService<Dict> {
     void exportExcel(HttpServletResponse response);
 
     void importData(MultipartFile file);
+
+    String getDictByParentDictCodeAndValue(String parentDictCode,String value);
+
+    List<Dict> getDictByDictCode(String dictCode);
 }

@@ -5,6 +5,8 @@ import com.wukong.yygh.hosp.repository.DepartmentRepository;
 import com.wukong.yygh.hosp.service.DepartmentService;
 import com.wukong.yygh.model.hosp.Department;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.Page;

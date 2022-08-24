@@ -34,7 +34,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/hosp")
 @Slf4j
-public class HospitalController {
+public class HospitalApiController {
 
     @Autowired
     private HospitalService hospitalService;

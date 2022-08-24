@@ -1,6 +1,7 @@
 package com.wukong.yygh.dict.service.impl;
 
 import com.alibaba.excel.EasyExcel;
+import com.alibaba.excel.util.StringUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.wukong.yygh.dict.excel.DemoDataListener;
 import com.wukong.yygh.dict.excel.Student;
@@ -10,6 +11,7 @@ import com.wukong.yygh.dict.service.DictService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wukong.yygh.model.cmn.Dict;
 import com.wukong.yygh.vo.cmn.DictEeVo;
+import org.apache.poi.util.StringUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
@@ -95,6 +97,49 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
             e.printStackTrace();
         }
 
+    }
+
+    @Override
+    public String getDictByParentDictCodeAndValue(String parentDictCode, String value) {
+        // 判断 dictCode是否为空
+        if (StringUtils.isEmpty(parentDictCode)){
+            QueryWrapper queryWrapper = new QueryWrapper();
+            queryWrapper.eq("value",value);
+            Dict dict = baseMapper.selectOne(queryWrapper);
+            if (null != dict){
+                return dict.getName();
+            }
+        }else {
+            QueryWrapper queryWrapper = new QueryWrapper();
+            queryWrapper.eq("dict_code",parentDictCode);
+            Dict d2 = baseMapper.selectOne(queryWrapper);
+            Long parentId = d2.getId();
+
+            QueryWrapper queryWrapper1 = new QueryWrapper();
+            queryWrapper1.eq("parent_id",parentId);
+            queryWrapper1.eq("value",value);
+            Dict dict = baseMapper.selectOne(queryWrapper1);
+            if (null != dict){
+                return dict.getName();
+            }
+        }
+
+        return null;
+    }
+
+    @Override
+    public List<Dict> getDictByDictCode(String dictCode) {
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("dict_code",dictCode);
+        Dict dict = baseMapper.selectOne(queryWrapper);
+        if (null != dict){
+            Long parentId = dict.getId();
+            QueryWrapper<Dict> queryWrapper1 = new QueryWrapper();
+            queryWrapper1.eq("parent_id",parentId);
+            List<Dict> list = baseMapper.selectList(queryWrapper1);
+            return list;
+        }
+        return null;
     }
 
     // 判断当前元素是否有下一子元素
