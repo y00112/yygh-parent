@@ -26,7 +26,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/admin/cmn/dict")
-@CrossOrigin
+//@CrossOrigin
 @Api(tags = "数据资料模块控制层")
 @Slf4j
 public class DictController {

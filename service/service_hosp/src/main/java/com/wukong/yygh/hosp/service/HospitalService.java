@@ -4,6 +4,7 @@ import com.wukong.yygh.model.hosp.Hospital;
 import com.wukong.yygh.vo.hosp.HospitalQueryVo;
 import org.springframework.data.domain.Page;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,4 +22,6 @@ public interface HospitalService {
     void updateStatus(String id, Integer status);
 
     Hospital getHospitalById(String id);
+
+    List<Hospital> findByNameLike(String name);
 }

@@ -14,7 +14,7 @@ import java.util.Map;
 @RestController
 @Slf4j
 @RequestMapping("/yygh/user")
-@CrossOrigin //允许跨域
+//@CrossOrigin //允许跨域
 public class LoginController {
 
     /**

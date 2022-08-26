@@ -3,6 +3,7 @@ package com.wukong.yygh.hosp.service;
 import com.wukong.yygh.model.hosp.Schedule;
 import org.springframework.data.domain.Page;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -14,4 +15,8 @@ public interface ScheduleService {
     Page<Schedule> getSchedulePage(String hoscode, String page, String limit);
 
     void removeSchedule(String hosScheduleId);
+
+    Map<String, Object> getSchedulePage(Integer page, Integer limit, String hoscode, String depcode);
+
+    List<Schedule> getDetailSchedule(String hoscode, String depcode, String workDate);
 }

@@ -15,6 +15,7 @@ import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -105,6 +106,12 @@ public class HospitalServiceImpl implements HospitalService {
        Hospital hospital = hospitalRepository.findById(id).get();
        packHospital(hospital);
        return hospital;
+    }
+
+    @Override
+    public List<Hospital> findByNameLike(String name) {
+        List<Hospital> list = hospitalRepository.findByHosnameLike(name);
+        return list;
     }
 
     private void packHospital(Hospital item) {
