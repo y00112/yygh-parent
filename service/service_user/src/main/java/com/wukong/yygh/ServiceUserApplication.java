@@ -14,7 +14,6 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = "com.wukong")
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = "com.wukong")
-@MapperScan("com.wukong.yygh.user.mapper")
 public class ServiceUserApplication {
     public static void main(String[] args) {
         SpringApplication.run(ServiceUserApplication.class, args);

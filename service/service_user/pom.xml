@@ -17,6 +17,13 @@
     </properties>
 
     <dependencies>
+        <!--使用OpenFeign 远程调用-->
+        <dependency>
+            <groupId>com.wukong</groupId>
+            <artifactId>service_cmn_client</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>

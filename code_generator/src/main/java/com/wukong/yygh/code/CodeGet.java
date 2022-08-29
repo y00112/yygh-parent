@@ -40,7 +40,7 @@ public class CodeGet {
 
         // 4、包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName("user"); //模块名
+        pc.setModuleName("patient"); //模块名
         pc.setParent("com.wukong.yygh");
         pc.setController("controller");
         pc.setEntity("entity");
@@ -52,7 +52,7 @@ public class CodeGet {
         StrategyConfig strategy = new StrategyConfig();
 
         //表名
-        strategy.setInclude("user_info");
+        strategy.setInclude("patient");
 
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
 
