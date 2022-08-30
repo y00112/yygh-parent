@@ -121,4 +121,9 @@ public class DepartmentServiceImpl implements DepartmentService {
         //返回
         return result;
     }
+
+    @Override
+    public Department getDepartByHoscodeAndDepcode(String hoscode, String depcode) {
+        return departmentRepository.findByHoscodeAndDepcode(hoscode,depcode);
+    }
 }

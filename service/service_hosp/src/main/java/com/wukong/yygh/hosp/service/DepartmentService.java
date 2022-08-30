@@ -28,4 +28,6 @@ public interface DepartmentService {
 
 
     List<DepartmentVo> getAllDepts(String hoscode);
+
+    Department getDepartByHoscodeAndDepcode(String hoscode, String depcode);
 }
