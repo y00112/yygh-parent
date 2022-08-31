@@ -35,7 +35,7 @@ spring:
       connection-test-query: SELECT 1
       connection-timeout: 60000
       idle-timeout: 500000
-      max-lifetime: 540000
+      max-lifetime: 120000
       maximum-pool-size: 12
       minimum-idle: 10
       pool-name: GuliHikariPool
