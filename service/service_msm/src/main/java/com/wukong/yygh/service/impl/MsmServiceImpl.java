@@ -3,6 +3,7 @@ package com.wukong.yygh.service.impl;
 import com.wukong.yygh.service.MsmService;
 import com.wukong.yygh.utils.HttpUtils;
 import com.wukong.yygh.utils.RandomUtil;
+import com.wukong.yygh.vo.msm.MsmVo;
 import org.apache.http.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -67,5 +68,12 @@ public class MsmServiceImpl implements MsmService {
             }
 
         }
+    }
+
+    @Override
+    public void send(MsmVo msmVo) {
+        String phone = msmVo.getPhone();
+//        this.sendCode(phone);
+        System.out.println(msmVo.getParam().toString());
     }
 }

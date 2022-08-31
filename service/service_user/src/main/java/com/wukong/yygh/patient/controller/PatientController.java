@@ -5,6 +5,8 @@ import com.wukong.yygh.common.result.ResponseResult;
 import com.wukong.yygh.model.user.Patient;
 import com.wukong.yygh.patient.service.PatientService;
 import com.wukong.yygh.user.utils.AuthContextHolder;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -51,7 +53,7 @@ public class PatientController {
 
 
     /**
-     * 获取就诊人信息
+     * 获取就诊人信息ById
      */
     @GetMapping("/auth/get/{id}")
     public ResponseResult getPatientInfo(@PathVariable("id") Integer pid){

@@ -3,50 +3,56 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>yygh-parent</artifactId>
+        <artifactId>service</artifactId>
         <groupId>com.wukong</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>service_client</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>service_cmn_client</module>
-        <module>service_user_client</module>
-        <module>service_hosp_client</module>
-    </modules>
+    <artifactId>service_orders</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
     <dependencies>
-        <dependency>
-            <groupId>com.wukong</groupId>
-            <artifactId>service_utils</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
 
         <dependency>
             <groupId>com.wukong</groupId>
-            <artifactId>model</artifactId>
+            <artifactId>rabbit_util</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-            <scope>provided </scope>
+        </dependency>
+        <!--openFeign远程调用-->
+        <dependency>
+            <groupId>com.wukong</groupId>
+            <artifactId>service_cmn_client</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--openFeign远程调用-->
+        <dependency>
+            <groupId>com.wukong</groupId>
+            <artifactId>service_user_client</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--openFeign远程调用-->
+        <dependency>
+            <groupId>com.wukong</groupId>
+            <artifactId>service_hosp_client</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <scope>provided </scope>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
         </dependency>
 
-        <!-- 服务调用feign -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-            <scope>provided </scope>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
         </dependency>
     </dependencies>
+
 </project>

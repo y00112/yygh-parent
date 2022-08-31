@@ -8,41 +8,54 @@ spring:
 # 环境设置：dev test prod
   profiles:
     active: dev
+
 # MySQL数据库链接
   datasource:
     url: jdbc:mysql://47.94.220.33:3306/yygh_hosp?characterEncoding=utf-8&useSSL=false
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
+
 # 返回 JSON的全局时间格式
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
-  # mongodb链接信息
+
+# mongodb链接信息
   data:
     mongodb:
       uri: mongodb://47.94.220.33:27017/test
-  # nacos服务地址
+
+# nacos服务地址
   cloud:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+# rabbitmq链接信息
+  rabbitmq:
+    host: 47.94.220.33
+    port: 5672
+    username: wukong
+    password: wukong
 # mybatis日志
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
   # redis配置
   redis:
     host: 127.0.0.1
     port: 6379
     database: 1
     timeout: 1800000
+
 feign:
   client:
     config:
       default:
         connectTimeout: 300000
         readTimeout: 300000
+
     # 连接池
     hikari:
       #连接池名

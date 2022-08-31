@@ -1,6 +1,8 @@
 package com.wukong.yygh.hosp.service;
 
 import com.wukong.yygh.model.hosp.Schedule;
+import com.wukong.yygh.vo.hosp.ScheduleOrderVo;
+import com.wukong.yygh.vo.order.OrderQueryVo;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
@@ -23,4 +25,8 @@ public interface ScheduleService {
     Map<String, Object> getBookingScheduleRule(Integer page, Integer limit, String hoscode, String depcode);
 
     Schedule getScheduleInfoByscheduleId(String scheduleId);
+
+    ScheduleOrderVo getScheduleOrderVo(String scheduleId);
+
+    void update(Schedule schedule);
 }
