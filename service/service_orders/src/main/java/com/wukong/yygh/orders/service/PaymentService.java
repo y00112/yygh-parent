@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.wukong.yygh.model.order.OrderInfo;
 import com.wukong.yygh.model.order.PaymentInfo;
 
+import java.util.Map;
+
 /**
  * Created By WuKong on 2022/8/31 18:52
  **/
@@ -15,4 +17,6 @@ public interface PaymentService  extends IService<PaymentInfo> {
      * @param paymentType 支付类型（1：微信 2：支付宝）
      */
     void savePaymentInfo(OrderInfo order, Integer paymentType);
+
+    void paySuccess(String out_trade_no, Integer status, Map<String, String> resultMap);
 }

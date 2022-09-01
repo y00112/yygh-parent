@@ -327,6 +327,7 @@ public class ScheduleServiceImpl implements ScheduleService {
         schedule1.setReservedNumber(schedule.getReservedNumber());
         schedule1.setAvailableNumber(schedule.getAvailableNumber());
         scheduleRepository.save(schedule1);
+
     }
 
     private void packageSchedule(Schedule schedule) {

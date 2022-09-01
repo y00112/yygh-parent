@@ -52,7 +52,7 @@ public class CodeGet {
         StrategyConfig strategy = new StrategyConfig();
 
         //表名
-        strategy.setInclude("order_info");
+        strategy.setInclude("refund_info");
 
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
 

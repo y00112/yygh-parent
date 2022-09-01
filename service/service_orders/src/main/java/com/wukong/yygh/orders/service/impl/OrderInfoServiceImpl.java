@@ -11,10 +11,13 @@ import com.wukong.yygh.common.exception.MyException;
 import com.wukong.yygh.common.result.ResponseResult;
 import com.wukong.yygh.enums.OrderStatusEnum;
 import com.wukong.yygh.model.order.OrderInfo;
+import com.wukong.yygh.model.order.PaymentInfo;
 import com.wukong.yygh.model.user.Patient;
 import com.wukong.yygh.orders.mapper.OrderInfoMapper;
 import com.wukong.yygh.orders.service.OrderInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.wukong.yygh.orders.service.PaymentService;
+import com.wukong.yygh.orders.service.WeiXinPayService;
 import com.wukong.yygh.orders.utils.HttpClient;
 import com.wukong.yygh.orders.utils.HttpRequestHelper;
 import com.wukong.yygh.orders.utils.HttpUtil;
@@ -22,6 +25,8 @@ import com.wukong.yygh.rabbit.MQConst;
 import com.wukong.yygh.rabbit.RabbitService;
 import com.wukong.yygh.vo.hosp.ScheduleOrderVo;
 import com.wukong.yygh.vo.msm.MsmVo;
+import com.wukong.yygh.vo.order.OrderCountQueryVo;
+import com.wukong.yygh.vo.order.OrderCountVo;
 import com.wukong.yygh.vo.order.OrderMqVo;
 import com.wukong.yygh.vo.order.OrderQueryVo;
 import net.sf.jsqlparser.expression.DateTimeLiteralExpression;
@@ -31,9 +36,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 /**
  * <p>
@@ -54,6 +57,12 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
 
     @Autowired
     private RabbitService rabbitService;
+
+    @Autowired
+    private WeiXinPayService weiXinPayService;
+
+    @Autowired
+    private PaymentService paymentService;
 
     @Override
     public Long saveOrder(String scheduleId, String patientId) {
@@ -229,6 +238,86 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
     public OrderInfo getOrderInfo(Long id) {
         OrderInfo orderInfo = baseMapper.selectById(id);
         return this.packOrderInfo(orderInfo);
+    }
+
+    @Override
+    public boolean cancelOrder(Long orderId) {
+        // 1、判断当前时间，是否已经过了平台规定的退号截止时间
+        OrderInfo orderInfo = baseMapper.selectById(orderId);
+        Date quitDate = orderInfo.getQuitTime();
+        DateTime quitTime = new DateTime(quitDate);
+        if (quitTime.isBeforeNow()){
+            throw new MyException(20001,"已过退号截止时间");
+        }
+        /*
+          2、当前时间没有超过退号截止时间，平台调用医院医院系统，确认是否取消预约
+            2.1、如果医院返回不能取消，抛出异常
+            2.2、若果医院返回可以取消
+               2.2.1：退款表添加一条退款数据
+               2.2.2：请求微信服务器要退款
+         */
+        // 2、封装请求参数
+        Map<String, Object> reqMap = new HashMap<>();
+        reqMap.put("hoscode",orderInfo.getHoscode());
+        reqMap.put("hosRecordId",orderInfo.getHosRecordId());
+        reqMap.put("timestamp", HttpRequestHelper.getTimestamp());
+        reqMap.put("sign", "");
+        JSONObject jsonObject = HttpRequestHelper.sendRequest(reqMap, "http://localhost:9999/order/updateCancelStatus");
+        if (jsonObject.getInteger("code") != 200){
+            throw new MyException(20001,"不能取消支付");
+        }else {
+            if(orderInfo.getOrderStatus().intValue() == OrderStatusEnum.PAID.getStatus().intValue()) {
+                //已支付 退款
+                boolean isRefund = weiXinPayService.refund(orderId);
+                if(!isRefund) {
+                    throw new MyException(20001,"退款失败");
+                }
+            }
+            // 3、更新订单表订单的状态，支付记录表的支付状态
+            orderInfo.setOrderStatus(OrderStatusEnum.CANCLE.getStatus());
+            this.updateById(orderInfo);
+            //更新支付记录状态。
+            QueryWrapper<PaymentInfo> queryWrapper=new QueryWrapper<PaymentInfo>();
+            queryWrapper.eq("order_id",orderId);
+            PaymentInfo paymentInfo = paymentService.getOne(queryWrapper);
+            paymentInfo.setPaymentStatus(-1); //退款
+            paymentInfo.setUpdateTime(new Date());
+            paymentService.updateById(paymentInfo);
+
+            //发送mq信息更新预约数 我们与下单成功更新预约数使用相同的mq信息，不设置可预约数与剩余预约数，接收端可预约数减1即可
+            OrderMqVo orderMqVo = new OrderMqVo();
+            orderMqVo.setScheduleId(orderInfo.getScheduleId());
+            //短信提示
+            MsmVo msmVo = new MsmVo();
+            msmVo.setPhone(orderInfo.getPatientPhone());
+            orderMqVo.setMsmVo(msmVo);
+            rabbitService.sendMessage(MQConst.EXCHANGE_DIRECT_ORDER, MQConst.ROUTING_ORDER, orderMqVo);
+
+            return true;
+        }
+    }
+
+    @Override
+    public void patientTips() {
+        // 当前时间
+        String string = new DateTime().toString("yyyy-MM-dd");
+            QueryWrapper<OrderInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("reserve_date",string);
+        queryWrapper.ne("order_status",OrderStatusEnum.CANCLE.getStatus());
+        List<OrderInfo> orderInfos = baseMapper.selectList(queryWrapper);
+        orderInfos.forEach(item ->{
+            System.out.println("今天预约的人："+item.toString());
+            // 发送短信提示
+            MsmVo msmVo = new MsmVo();
+            msmVo.setPhone(item.getPatientPhone());
+            rabbitService.sendMessage(MQConst.EXCHANGE_DIRECT_MSM, MQConst.ROUTING_MSM_ITEM, msmVo);
+
+        });
+    }
+
+    @Override
+    public List<OrderCountVo> countOrderInfoByQuery(OrderCountQueryVo orderCountQueryVo) {
+        return baseMapper.countOrderInfoByQuery(orderCountQueryVo);
     }
 
     private OrderInfo packOrderInfo(OrderInfo orderInfo) {

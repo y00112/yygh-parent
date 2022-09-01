@@ -36,12 +36,19 @@ public class HospitalReceiver {
             key = MQConst.ROUTING_ORDER)
     })
     public void consumer(OrderMqVo orderMqVo, Message message, Channel channel){
-        String scheduleId = orderMqVo.getScheduleId();
-        Schedule schedule = scheduleService.getScheduleInfoByscheduleId(scheduleId);
-        schedule.setAvailableNumber(orderMqVo.getAvailableNumber());
-        schedule.setReservedNumber(orderMqVo.getReservedNumber());
-
-        scheduleService.update(schedule);
+        if(null != orderMqVo.getAvailableNumber()) {
+            //更新排班
+            Schedule schedule = scheduleService.getScheduleInfoByscheduleId(orderMqVo.getScheduleId());
+            schedule.setReservedNumber(orderMqVo.getReservedNumber());
+            schedule.setAvailableNumber(orderMqVo.getAvailableNumber());
+            scheduleService.update(schedule);
+        } else {
+            //取消预约更新预约数
+            Schedule schedule = scheduleService.getScheduleInfoByscheduleId(orderMqVo.getScheduleId());
+            int availableNumber = schedule.getAvailableNumber().intValue() + 1;
+            schedule.setAvailableNumber(availableNumber);
+            scheduleService.update(schedule);
+        }
         //发送短信
         MsmVo msmVo = orderMqVo.getMsmVo();
         if(null != msmVo) {

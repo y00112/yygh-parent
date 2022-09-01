@@ -7,4 +7,8 @@ import java.util.Map;
  **/
 public interface WeiXinPayService {
     Map createNative(Long orderId);
+
+    Map<String, String> queryPayStatus(Long orderId);
+
+    boolean refund(Long orderId);
 }

@@ -16,7 +16,7 @@ public class ConstantPropertiesUtils implements InitializingBean {
     @Value("${weixin.pay.partnerkey}")
     private String partnerkey;
 
-//    @Value("weixin.cert")
+    @Value("${weixin.cert}")
     private String cert;
 
     public static String APPID;

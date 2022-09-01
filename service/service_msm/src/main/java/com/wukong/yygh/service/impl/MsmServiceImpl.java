@@ -74,6 +74,7 @@ public class MsmServiceImpl implements MsmService {
     public void send(MsmVo msmVo) {
         String phone = msmVo.getPhone();
 //        this.sendCode(phone);
-        System.out.println(msmVo.getParam().toString());
+//        System.out.println(msmVo.getParam().toString());
+        System.out.println(phone+"就医提醒短信...");
     }
 }
